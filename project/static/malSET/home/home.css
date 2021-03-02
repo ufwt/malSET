@@ -1,0 +1,110 @@
+/* Home Section */
+.home-section {
+    min-height: 80vh;
+}
+
+/* File Uploader */
+input[type=file], /* FF, IE7+, chrome (except button) */
+input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
+    cursor: pointer; 
+}
+.item .item-content {
+    padding: 30px 35px
+}
+
+.image-upload {
+    width: 100%;
+    height: 300px;
+    border: 5px dashed white;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+    color: white;
+    overflow: hidden
+}
+
+.item-wrapper form img {
+    margin-bottom: 20px;
+    width: auto;
+    height: auto;
+    max-height: 400px;
+    width: auto;
+    border-radius: 5px;
+    overflow: hidden
+}
+
+.image-upload img {
+    height: 100% !important;
+    width: auto !important;
+    border-radius: 0px;
+    margin: 0 auto
+}
+
+.image-upload i {
+    font-size: 6em;
+}
+
+.image-upload input {
+    cursor: pointer;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.item-wrapper input {
+    height: 43px;
+    line-height: 43px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px
+}
+
+/* Features Section */
+.features-section{
+    width: 100%;
+    padding: 5rem 0 5rem;
+    background-color: white;
+    color: #00498D;
+}
+.features-section .features-item{
+	box-shadow: 0 0 10px #dddde3;
+	padding: 40px 30px;
+	margin-bottom: 30px;
+	background-color: #ffffff;
+	border-radius: 5px;
+	text-align: center;
+	transition: all 0.5s ease;
+}
+.features-section .features-item:hover{
+	transform: translateY(-10px);
+}
+
+.features-section .features-item .icon i {
+    padding: 25px;
+    font-size: 50px;
+    display: inline-block;
+    transition: all 0.5s ease;
+}
+.features-section .features-item p{
+	font-size: 1.2rem;
+}
+
+/* About Section */
+
+/* Footer Section */
+.footer{
+	padding-top: 30px;
+	text-align: center;
+}
+.footer .footer-logo a{
+	font-size: 30px;
+	font-weight: 700;
+	color: #ffffff;
+	display: block;
+	margin: 0 0 15px;
+}

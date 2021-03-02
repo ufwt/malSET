@@ -1,0 +1,129 @@
+{% extends "malSET/base.html" %}
+
+{% load static %}
+{% block content-css %}
+    <!-- Bootstrap DataTables CSS-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+    <!-- Home CSS-->
+    <link rel="stylesheet" type="text/css" href="{% static 'malSET/home/home.css' %}">
+{% endblock content-css %}
+
+{% block content %}
+    <section class="home-section" id="home">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 pb-3">
+                    <!-- Section Title Start -->
+                    <div class="section-title">
+                        <h1 class="title text-center font-weight-bold">malSET</h1>
+                        <h2 class="subtitle text-center"> A Symbolic Execution Toolkit for Malware Analysis</h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+            </div>
+            <div class="row d-flex p-5">
+                <!-- File Upload -->
+                <div class="item-wrapper w-100">
+                    <div class="item">
+                        <form data-validation="true" action="#" method="post" enctype="multipart/form-data">
+                            <div class="item-inner">
+                                <div class="item-content">
+                                    <div class="image-upload"> 
+                                        <label class="w-100 h-100" for="file_upload" style="cursor: pointer;">
+                                            <div class="h-100 d-flex justify-content-center align-items-center">
+                                                <div class="dplay-tbl">
+                                                    <div class="dplay-tbl-cell"> <i class="fa fa-cloud-upload pb-2"></i>
+                                                        <h5><b>Choose Your File to Upload</b></h5>
+                                                        <h6 class="mb-4">Or Drop Your File Here</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--upload-content--> 
+                                            <input type="file" name="image_name" id="file_upload" class="image-input h-100" value="">
+                                        </label> 
+                                    </div>
+                                </div>
+                                <!--item-content-->
+                            </div>
+                            <!--item-inner-->
+                        </form>
+                    </div>
+                    <!--item-->
+                </div>
+                <!-- File Upload -->
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 pb-3">
+                    <!-- Section Title Start -->
+                    <div class="section-title pb-4">
+                        <h2 class="title text-center font-weight-bold">Features</h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+            </div>
+            <div class="row d-flex">
+                <!-- Features Item Start -->
+                <div class="col-md-4">
+                    <div class="col-12 features-item">
+                        <div class="icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3 class="font-weight-bold pb-2 noselect">Behavioral Insights</h3>
+                        <p class="noselect">Extracts insightful behavioral characteristics, such as API and system calls</p>
+                    </div>
+                </div>
+                <!-- Features Item End -->
+                <!-- Features Item Start -->
+                <div class="col-md-4">
+                    <div class="col-12 features-item">
+                        <div class="icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="font-weight-bold pb-2 noselect">Symbolic Execution</h3>
+                        <p class="noselect">Implements a symbolic execution engine to systematically explore provided malware samples</p>
+                    </div>
+                </div>
+                <!-- Features Item End -->
+                <!-- Features Item Start -->
+                <div class="col-md-4">
+                    <div class="col-12 features-item">
+                        <div class="icon">
+                            <i class="fas fa-fingerprint"></i>
+                        </div>
+                        <h3 class="font-weight-bold pb-2 noselect">Classification Patterns</h3>
+                        <p class="noselect">Dynamically generated reports tailored for machine learning malware classification systems</p>
+                    </div>
+                </div>
+                <!-- Features Item End -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section Start -->
+    <footer class="footer">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="dol-lg-6">
+              <div class="footer-logo">
+                <a href="#">malSET - Toolkit</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer Section End -->
+    
+{% endblock content %}
+
+{% block content-js %}
+    <!-- Bootstrap DataTables JS -->
+    <script src='https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js'></script>
+    <script src='https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js'></script>
+    <!-- Home JS -->
+    <script type="text/javascript" src="{% static 'malSET/home/home.js' %}"></script>
+{% endblock content-js %}
