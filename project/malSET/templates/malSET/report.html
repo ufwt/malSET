@@ -1,0 +1,72 @@
+{% extends "malSET/base.html" %}
+
+{% load static %}
+{% block content-css %}
+    <!-- Bootstrap DataTables CSS-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+    <!-- Home CSS-->
+    <link rel="stylesheet" type="text/css" href="{% static 'malSET/report/report.css' %}">
+{% endblock content-css %}
+
+{% block content %}
+    <section class="home-section" id="home">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 pb-1">
+                    <!-- Section Title Start -->
+                    <div class="section-title">
+                        <h1 class="title text-center font-weight-bold">malSET - Report</h1>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+            </div>
+            <div class="row d-flex p-5">
+                <!-- Card Start -->
+                <div class="card w-100">
+                    <h2 class="text-center pb-3">File Analysis</h2>
+                    <!-- Row Section Start -->
+                    <hr>
+                    <div class="row px-2">
+                        <div class="col-6">
+                            <strong class="font-weight-bold">File Information <a data-toggle="tooltip" title="First-time Login Instructions"><i class="far fa-info-circle"></i></a>
+                            </strong>
+                        </div>
+                        <div class="col-6">
+                            <div class="col-12"><strong class="font-weight-bold mr-1">Filename -</strong>{{filename}}</div>
+                            <div class="col-12"><strong class="font-weight-bold mr-1">Filesize -</strong>{{filesize.0}} ({{filesize.1}})</div>
+                            <div class="col-12"><strong class="font-weight-bold mr-1">MD5 -</strong>{{md5}}</div>
+                            <div class="col-12"><strong class="font-weight-bold mr-1">SHA1 -</strong>{{sha1}}</div>
+                        </div>
+                    </div>
+                    <!-- Row Section End -->
+                    <!-- Row Section Start -->
+                    <hr>
+                    <div class="row px-2">
+                        <div class="col-6">
+                            <strong class="font-weight-bold">Imported DLLs <a><i class="far fa-info-circle"></i></a></strong>
+                        </div>
+                        <div class="col-6">
+                            {% for key, values in dll_dict.items %}
+                            <div class="col-12"><strong class="font-weight-bold mr-1">{{key}}</strong></div>
+                            {% for v in values %}
+                            <div class="col-12 ml-4">{{v}}</div>
+                            {% endfor %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <!-- Row Section End -->
+                </div>
+                <!-- Card End -->
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}
+
+{% block content-js %}
+    <!-- Bootstrap DataTables JS -->
+    <script src='https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js'></script>
+    <script src='https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js'></script>
+    <!-- Home JS -->
+    <script type="text/javascript" src="{% static 'malSET/report/report.js' %}"></script>
+{% endblock content-js %}

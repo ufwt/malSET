@@ -21,6 +21,8 @@
                     <!-- Section Title End -->
                 </div>
             </div>
+            <form id="inputFile" enctype="multipart/form-data" method="POST" action="{% url 'upload' %}">
+            {% csrf_token %}
             <div class="row d-flex p-5">
                 <!-- File Upload -->
                 <div class="item-wrapper w-100">
@@ -28,19 +30,19 @@
                         <form data-validation="true" action="#" method="post" enctype="multipart/form-data">
                             <div class="item-inner">
                                 <div class="item-content">
-                                    <div class="image-upload"> 
+                                    <div class="image-upload">
                                         <label class="w-100 h-100" for="file_upload" style="cursor: pointer;">
                                             <div class="h-100 d-flex justify-content-center align-items-center">
                                                 <div class="dplay-tbl">
                                                     <div class="dplay-tbl-cell"> <i class="fa fa-cloud-upload pb-2"></i>
-                                                        <h5><b>Choose Your File to Upload</b></h5>
-                                                        <h6 class="mb-4">Or Drop Your File Here</h6>
+                                                        <h5 class="noselect"><b>Choose Your File to Upload</b></h5>
+                                                        <h6 class="mb-4 noselect">Or Drop Your File Here</h6>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!--upload-content--> 
-                                            <input type="file" name="image_name" id="file_upload" class="image-input h-100" value="">
-                                        </label> 
+                                                <!--upload-content-->
+                                                <input type="file" name="filename" id="file_upload" class="image-input h-100" value="">
+                                        </label>
                                     </div>
                                 </div>
                                 <!--item-content-->
@@ -52,6 +54,8 @@
                 </div>
                 <!-- File Upload -->
             </div>
+            <input type="submit" value="Submit" style="visibility: hidden;">
+            </form>
         </div>
     </section>
 
@@ -104,20 +108,6 @@
         </div>
     </section>
 
-    <!-- Footer Section Start -->
-    <footer class="footer">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="dol-lg-6">
-              <div class="footer-logo">
-                <a href="#">malSET - Toolkit</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-      <!-- Footer Section End -->
-    
 {% endblock content %}
 
 {% block content-js %}

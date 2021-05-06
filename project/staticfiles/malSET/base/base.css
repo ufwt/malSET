@@ -1,4 +1,90 @@
-body { padding-top: 40px; }
-@media screen and (max-width: 768px) {
-    body { padding-top: 0px; }
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+/* Global Variables */
+:root {
+    --dark-900: #22252A;
+    --dark-800: #2D3035;
+    --dark-700: #3E4249;
+    --dark-600: #4D5259;
+
+    --light-0: #ffffff;
+    --light-100: #f5f5f5;
+    --light-300: #dddddd;
+}
+
+body {
+    padding-top: 5rem;
+    min-height: 100vh;
+    /* background-color: var(--dark-900); */
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    background: linear-gradient(-45deg, #000B18, #00498D, #000B18);
+    /* background-image: linear-gradient(to bottom right, var(--bg-blue-light),var(--bg-blue-dark)); */
+    background-repeat: no-repeat;
+    background-size: 300% 300%;
+    animation: gradient 8s ease infinite;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 100%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+          -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+nav.navbar{
+    /* background-color: var(--dark-800); */
+    box-shadow: none;
+}
+.navbar a:after{
+    color: rgb(255, 255, 255);
+    mix-blend-mode: difference;
+}
+
+.card {
+    margin: 1rem 0 1rem;
+    padding: 2rem 1rem;
+    background-color: white;
+    color: #00498D;
+    overflow: hidden;
+}
+.card h1,
+.card h2,
+.card h3{
+    font-weight: 700;
+}
+
+/* Footer Section */
+.footer{
+	padding-top: 30px;
+	text-align: center;
+}
+.footer .footer-logo a{
+	font-size: 30px;
+	font-weight: 700;
+	color: #ffffff;
+	display: block;
+	margin: 0 0 15px;
+}
+
+/* If smaller than 992px and dropdown nav activated */
+@media(max-width: 991px){
+	nav.navbar{
+		background-color: #00498D;
+	}
 }
