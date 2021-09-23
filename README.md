@@ -18,7 +18,7 @@
 </div>
 
 ## About
-This research explores the current landscape of literature surrounding symbolic execution, its utilization with malware analysis, and potential integration into malware classification systems by extracting API and system calls from malicious programs. Furthermore, this research presents a proof-of-concept implementation of a web-based malware analysis toolkit that integrates the Angr symbolic execution framework. 
+This research, conducted during UNG's Cybersecurity Capstone course, explores the current landscape of literature surrounding symbolic execution, its utilization with malware analysis, and potential integration into malware classification systems by extracting API and system calls from malicious programs. Furthermore, this research presents a proof-of-concept implementation of a web-based malware analysis toolkit that integrates the Angr symbolic execution framework. 
 
 Designed to extract API and system calls from Windows executables, this toolkit is specifically developed for the purpose of assisting machine learning-based malware classification systems. Preliminary results demonstrate the capability and potential for this tool to provide automated analysis of malicious Windows executables.
 
