@@ -8,10 +8,10 @@
   
   <p align="center">
     <strong>
-      <a href="about">About</a> •
-      <a href="project-demo">Project Demo</a> •
-      <a href="research-presentation">Research Presentation</a> •
-      <a href="support">Support</a>
+      <a href="#about">About</a> •
+      <a href="#project-demo">Project Demo</a> •
+      <a href="#research-presentation">Research Presentation</a> •
+      <a href="#support">Support</a>
     </strong>
   </p>
   
