@@ -32,4 +32,4 @@ Designed to extract API and system calls from Windows executables, this toolkit 
 ## Support
 For additional assistance, comments, or suggestions, please reach out to the developers at:
 <br><br>
-Daniel Haugen - **dlhaug7343@ung.edu**
+**Daniel Haugen**
